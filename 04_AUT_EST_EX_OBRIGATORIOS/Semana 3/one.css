@@ -1,0 +1,14 @@
+input[type=text],
+input[type=email],
+textarea{
+    width: 100%;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 1px solid pink;
+    outline: none;
+}
+input#nao{
+    margin-left: 30px;
+}
