@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  text-align: center;
+  padding: 5rem;
+  transition: background 0.5s linear, color 0,5s linear;
+  }
+  
+  h1 {
+  font-family: serif;
+  color: black;
+  text-align: center;
+  font-size: 45px;
+  margin: 0;
+  }
+  
+  h3 {
+  font-family: serif;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  }
+
+p {
+  margin: 0;
+}
+
+body.dark {
+  background-color: gray;
+  color: white;
+}
+
+.container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+label{
+  background-color: black;
+  border-radius: 40%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.5s linear;
+}
+
+body.dark label {
+  background-color:  rgba(206, 153, 218, 0.454);
+}
+
+input{
+  visibility: hidden;
+}
