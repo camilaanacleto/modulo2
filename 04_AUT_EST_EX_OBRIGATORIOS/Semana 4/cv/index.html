@@ -1,22 +1,32 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
   <head>
-    <link rel="stylesheet" type="text/css" href="cv.css">
-	  <meta charset="UTF-8">
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script scr="cv.js" defer></script>
-    <link rel="stylesheet" href="cv.css"> 
-    <title>Currículo Camila</title>
-  </head> 
+    <style>
+      h1 {text-align: center;}
+      h3{text-align: center;}
+      h4{text-align: center;}
+      p{text-align: center;}
+      li{text-align: center;}
+    </style>
 
-<body>
-  <div class="container">
-    <input type="checkbox" id="btn" name="btn">
-    <label for="btn"></label>
-  </div>
-  <h1>CAMILA ANACLETO</h1>
-	<h3> Estudante de Ciência da Computação </h3>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>CV</title>
+  </head>
+  <body>
+    <div>
+      <input type="checkbox" class="checkbox" id="chk" />
+      <label class="label" for="chk">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <div class="ball"></div>
+      </label>
+    </div>
 
+  <h1>CAMILA ANACLETO </h1>
+	<h3> Estudante de Ciência da Computação </h3><br>
   <h4>CONTEXTO ACADÊMICO: </h4>
   <p>O Inteli é uma instituição de ensino superior que utiliza a metodologia de projeto para o aprendizado. 
     Para tanto, utilizamos a metodologia Ágil como base para planejar e organizar nossos projetos e, em um período de dez semanas, 
@@ -24,7 +34,6 @@
     São 70 dias de muito aprendizado, desafios e dedicação para entregar um produto final aos nossos clientes.
   </p>
   <br>
-
   <h4>EXPERIÊNCIAS: </h4>
   <ul>
     <li>Estagiária no INTELI - Equipe de Admissões (ABR 2022 - O momento)
@@ -44,16 +53,13 @@
   </ul>  
   <br>
   <h4>CONTATO: </h4>
-  <ul>
-    <li><a href="https://www.linkedin.com/in/camila-anacleto-63101312b/">Linkedin</a> </li>
-    <li>E-mail: camila.anacleto@sou.inteli.edu.br </li>
-    <li>Celular: (11) 9 9999-9999 </li>
-  </ul>
 
-  <button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
-<p id="demo"></p>
+  <a  href="https://www.linkedin.com/in/camila-anacleto-63101312b/"><img src="linkedin.png" WIDTH="45px" HEIGHT="45px"></a>
+  <a  href=mailto:camilafernandaanacleto@gmail.com><img src="gmail.png" WIDTH="45px" HEIGHT="45px"></a>
+  <a  href="https://wa.me/5519991789043"><img src="wtt.png" WIDTH="45px" HEIGHT="45px"></a>
 
-</body>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+  </body>
 </html>
