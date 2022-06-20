@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="Ex4.js"></script>
+  <title>Exercício 4</title>
+</head>
+
+<body style="background-color: pink;">
+
+  <h1>Exercício 4</h1>
+  <h3>Insira abaixo o número de viajantes:</h3>
+  <label for="travelers"></label>
+  <input type="number" min="1" id="travelers" name="travelers" oninput="validity.valid||(value='');"/><br><br>
+
+
+  <h3>Selecione abaixo o período:</h3>
+  <label for="time"></label>
+  <select id="time" name="time">
+    <option value="day">Diurno</option>
+    <option value="night">Noturno</option>
+  </select>
+  <br><br><br>
+
+  <button type="button" onclick="count()">Verificar valor</button>
+    <h2>O valor total será de: <span id="total"></span></h3>
+  </div>
+
+</body>
+</html>
