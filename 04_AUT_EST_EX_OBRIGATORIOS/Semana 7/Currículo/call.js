@@ -32,8 +32,57 @@ app.get('/users', (req, res) => {
 });
 
 
+app.post('/userinsert', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+	sql = "INSERT INTO IDIOMAS (Num, Nome) VALUES ('" + req.body.title;
+	var db = new sqlite3.Database(DBPATH);
+		db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+	});
+	db.close(); // Fecha o banco
+	res.end();
+});
+
+// Atualiza um registro (é o U do CRUD - Update)
+app.patch('/userupdate', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+	sql = "UPDATE IDIOMAS SET title = '" + req.body.title + "' WHERE Num = " + req.body.userId;
+	var db = new sqlite3.Database(DBPATH); 
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+		res.end();
+	});
+	db.close(); 
+});
+
+
+app.delete('/userdelete', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); 
+
+	sql = "DELETE FROM IDIOMAS WHERE Num = " + req.body.userId;
+	var db = new sqlite3.Database(DBPATH); 
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+		res.end();
+	});
+	db.close();
+});
+
+
+
 app.get("/", (req, res) => { 
-    res.sendFile(__dirname + "/public/cv.html");
+    res.sendFile(__dirname + "/public/cV.html");
 });
 
 app.listen(port, hostname, () => {
