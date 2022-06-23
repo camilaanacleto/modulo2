@@ -8,13 +8,28 @@
   <title>Exercício 3</title>
 </head>
 
-<body style="background-color: pink;">
+<body>
   <h1>Exercício 3</h1>
-  <h3>Insira abaixo seu número de telefone celular no seguinte formato: (99)99999-9999</h3>
-  <form action="" method="get">
-    <input type="text" id="telephone" name="telephone" pattern="\(\d{2}\)\d{5}-\d{4}">
-    <button type="submit">Validar formato</button>
-  </form>
+  <label for="name1">Informe o primeiro nome:</label>
+  <input type="nome" id="name1">
+  <label for="name2">Informe o segundo nome:</label>
+  <input type="nome" id="name2">
+  <label for="name3">Informe o terceiro nome:</label>
+  <input type="nome" id="name3">
+  <button id="submit">Ordenar</button>
+  <div id="result"></div>
+  <script>
+    
+    const button = document.getElementById('submit');
+    button.addEventListener('click', () => {
+      const name1 = document.getElementById('name1').value;
+      const name2 = document.getElementById('name2').value;
+      const name3 = document.getElementById('name3').value;
+      const names = [name1, name2, name3];
+      const result = document.getElementById('result');
+      result.innerHTML = `A ordenação dos nomes informados é: ${names.sort()}.`;
+    });
+  </script>
 </body>
 
 </html>
